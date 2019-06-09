@@ -1,0 +1,53 @@
+# DataSource Config
+spring:
+  profiles:
+    active: dev
+#  thymeleaf:
+#    cache: false
+  redis:
+
+#    sentinel:
+#      master: mymaster
+#      nodes: 127.0.0.1:26379,127.0.0.1:26479
+    password: huawei
+    host: 47.107.78.132
+#    password: 123456
+#    host: localhost
+    port: 6379
+
+#  application:
+#    name: hw-blog
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:SS
+    timezone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    password: guest
+#    username: guest
+logging:
+  level:
+    root: INFO
+#    org.springframework.web: DEBUG
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://admin:admin@localhost:8761/eureka/
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  typeAliasesPackage: com.kr.community.entity.**
+#kisso:
+#  config:
+#    signkey: C691d971EJ3H376G81   # 对称签名密钥
+#    cookieName: kissoTOKEN             # COOKIE 名称
+#    loginUrl: http://a.client.com:8080/login
+#    logoutUrl: http://a.client.com:8080/user/logout
+#    cookieDomain: client.com
+server:
+  port: 8081
+  servlet:
+    context-path: /kr-community
+
+
